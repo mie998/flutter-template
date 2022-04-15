@@ -1,0 +1,15 @@
+{
+  "name": "flutterContainer",
+  "service": "flutter-vsc",
+  "dockerComposeFile": "../docker-compose.yml",
+  "extensions": ["Dart-Code.flutter"],
+  "remoteUser": "root",
+  "remoteEnv": {
+    "QT_X11_NO_MITSHM": "1",
+    "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/flutter/bin"
+  },
+  "settings": {
+    "terminal.integrated.profile.linux": null
+  },
+  "workspaceFolder": "/root/workspace"
+}

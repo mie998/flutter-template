@@ -8,7 +8,7 @@ ARG DART_VERSION=2.16.0
 RUN mkdir -p /usr/share/man/man1 && \
     apt-get update && apt-get install -y --no-install-recommends tzdata && \
     apt-get update && \
-    apt-get install -y --no-install-recommends bash ca-certifcates clang cmake curl file git libglu1-mesa libgtk-3-dev ninja-build pkg-config unzip xz-utils zip && \
+    apt-get install -y --no-install-recommends bash ca-certificates clang cmake curl file git libglu1-mesa libgtk-3-dev ninja-build pkg-config unzip xz-utils zip && \
     curl https://storage.googleapis.com/dart-archive/channels/stable/release/$DART_VERSION/sdk/dartsdk-linux-x64-release.zip -o /tmp/dart-sdk.zip && \
     unzip /tmp/dart-sdk.zip -d /usr/lib && rm /tmp/dart-sdk.zip
 

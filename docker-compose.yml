@@ -5,12 +5,14 @@ services:
     build:
       context: .
       dockerfile: .devcontainer/Dockerfile
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    secrets:
+      - id_rsa
     volumes:
       - ../.vscode:/workspace/.vscode:cached
       - "~/.gitconfig:/etc/gitconfig"
-    command: /bin/sh -c "while sleep 1000; do :; done"
-    env_file:
-      - flutter/.flutter.env
+    # env_file:
+    #   - flutter/.flutter.env
 
 secrets:
   id_rsa:
